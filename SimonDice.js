@@ -16,6 +16,17 @@ let tw = 1;
 let sp;
 let sptw;
 
+let Sound1;
+let Sound2;
+let Sound3;
+let Sound4;
+
+preload= () => {
+    Sound1 = loadSound('Sound1.mp3');
+    Sound2 = loadSound('Sound2.mp3');
+    Sound3 = loadSound('Sound3.mp3');
+    Sound4 = loadSound('Sound4.mp3');
+}
 setup = () => {
     createCanvas(600, 600);
 
@@ -61,6 +72,7 @@ function mousePressed() {
     if (click) {
         ye.onMousePressed = function () {
             ye.shapeColor = color(255, 255, 102);
+            Sound1.play();
             jugadota.push(1);
         }
         ye.onMouseReleased = function () {
@@ -69,6 +81,7 @@ function mousePressed() {
 
         az.onMousePressed = function () {
             az.shapeColor = color('blue');
+            Sound2.play();
             jugadota.push(2);
         }
         az.onMouseReleased = function () {
@@ -77,6 +90,7 @@ function mousePressed() {
 
         ro.onMousePressed = function () {
             ro.shapeColor = color('red');
+            Sound3.play();
             jugadota.push(3);
         }
         ro.onMouseReleased = function () {
@@ -84,7 +98,8 @@ function mousePressed() {
         }
 
         ve.onMousePressed = function () {
-            ve.shapeColor = color(0, 255, 0);
+            ve.shapeColor = color(0, 255, 0)
+            Sound4.play();;
             jugadota.push(4);
         }
         ve.onMouseReleased = function () {
@@ -142,15 +157,19 @@ juega = () => {
 
 amarilloE = () => {
     ye.shapeColor = color(255, 255, 102);
+    Sound1.play();
 }
 azulE = () => {
     az.shapeColor = color('blue');
+    Sound2.play();
 }
 rojoE = () => {
     ro.shapeColor = color('red');
+    Sound3.play();
 }
 verdeE = () => {
     ve.shapeColor = color(0, 255, 0);
+    Sound4.play();
 }
 
 off = () => {
@@ -206,7 +225,7 @@ comparar = (ia, jugadota) => {
 Bien = () => {
 
     if (jugadota.length === ia.length) {
-        console.log("estoy comparando")
+
         if (comparar(jugadota, ia)) {
 
             //si todo esta bien (osea devuelve true), saltara una alerta que te dira que lo siguiente:
