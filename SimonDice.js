@@ -16,12 +16,13 @@ let tw = 1;
 let sp;
 let sptw;
 
+//variables de sonidos
 let Sound1;
 let Sound2;
 let Sound3;
 let Sound4;
 
-preload= () => {
+preload = () => {
     Sound1 = loadSound('Sound1.mp3');
     Sound2 = loadSound('Sound2.mp3');
     Sound3 = loadSound('Sound3.mp3');
@@ -68,7 +69,7 @@ function mousePressed() {
     su valor es "false", una vez que la secuencia termine 
     click pasara a hacer "true"
     */
-    
+
     if (click) {
         ye.onMousePressed = function () {
             ye.shapeColor = color(255, 255, 102);
@@ -214,7 +215,7 @@ comparar = (ia, jugadota) => {
     el .every compara ambos
     arreglos.
     */
-    if(ia.length === jugadota.length && ia.every((v, index) => v === jugadota[index])){
+    if (ia.length === jugadota.length && ia.every((v, index) => v === jugadota[index])) {
         return true;
     }
 

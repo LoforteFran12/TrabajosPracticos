@@ -1,54 +1,59 @@
 //creo una constante con 100 palabras
 const palabras = [
-    "amor", "paz", "felicidad", 
-    "familia", "amistad", "libertad", 
-    "esperanza", "sueño", "luz", 
-    "sonrisa", "naturaleza", "cielo", 
-    "mar", "tierra", "vida", "corazón", 
-    "pasión", "sabiduría", "tiempo", 
-    "recuerdo", "sabor", "arte", 
-    "música", "color", "cultura", 
-    "tradición", "historia", "aventura", 
-    "destino", "caminos", "destello", 
-    "brillo", "mariposa", "estrella", 
-    "sonido", "silencio", "río", 
+    "amor", "paz", "felicidad",
+    "familia", "amistad", "libertad",
+    "esperanza", "sueño", "luz",
+    "sonrisa", "naturaleza", "cielo",
+    "mar", "tierra", "vida", "corazón",
+    "pasión", "sabiduría", "tiempo",
+    "recuerdo", "sabor", "arte",
+    "música", "color", "cultura",
+    "tradición", "historia", "aventura",
+    "destino", "caminos", "destello",
+    "brillo", "mariposa", "estrella",
+    "sonido", "silencio", "río",
     "montaña", "flor", "jardín",
-    "casa", "hogar", "amigo", 
-    "compañero", "viaje", "regalo", 
-    "sonido", "paso", "sombra", 
+    "casa", "hogar", "amigo",
+    "compañero", "viaje", "regalo",
+    "sonido", "paso", "sombra",
     "lago", "brisa", "nieve",
-    "sol", "luna", "nube", 
-    "canto", "alegría", "tristeza", 
-    "esperanza", "ciencia", "sabiduría", 
-    "estudio", "flecha", "risas", 
-    "requiem", "pensamiento", 
-    "conocimiento", "misterio", "vida", 
-    "universo", "pasado", "futuro", 
-    "momento", "creación", "ilusión", 
-    "realidad", "horizonte", "profundidad", 
-    "reflejo", "espejo", "sueños", 
+    "sol", "luna", "nube",
+    "canto", "alegría", "tristeza",
+    "esperanza", "ciencia", "sabiduría",
+    "estudio", "flecha", "risas",
+    "requiem", "pensamiento",
+    "conocimiento", "misterio", "vida",
+    "universo", "pasado", "futuro",
+    "momento", "creación", "ilusión",
+    "realidad", "horizonte", "profundidad",
+    "reflejo", "espejo", "sueños",
     "destinos", "valores", "justicia",
-    "honor", "valentía", "respeto", 
+    "honor", "valentía", "respeto",
     "generosidad", "empatía", "compasión",
-    "fuerza", "coraje", "poder", 
-    "sinceridad", "lealtad", "sabiduría", 
+    "fuerza", "coraje", "poder",
+    "sinceridad", "lealtad", "sabiduría",
     "misterios", "conexión", "descubrimiento", "aventura"
 ];
 
 let boton;
+
 // son las cantidades que te podes equivocar
 let vidas = 6;
+
 //select es la palabra que fue seleccionada por el random
 let Select;
+
 //cajita es el input
 let cajita;
+
 //mayo es el que se encarga de poner las letras en su lugar
 let mayo;
+
 // cuenta la cantidad de letras correctas
 let contador = 0;
 
 setup = () => {
-    createCanvas(1470,730);
+    createCanvas(1470, 730);
     background("purple");
 
     /*
@@ -78,11 +83,11 @@ juega = () => {
     console.log(Select);
 }
 
-function keyPressed(){
+function keyPressed() {
     //verifica si la letra esta en la palabra
-    if(keyIsDown(ENTER)===true){
+    if (keyIsDown(ENTER) === true) {
         for (let i = 0; i < Select.length; i++) {
-            if (mayo == Select[i]){
+            if (mayo == Select[i]) {
                 console.log("si va");
                 letra(i);
                 contador++;
@@ -99,83 +104,83 @@ function keyPressed(){
 }
 letra = (i) => {
     //dependiendo de la posicion de la letra se escriba
-    if(i == 0){
+    if (i == 0) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,30,50);
+        text(mayo, 30, 50);
     }
-    if(i == 1){
+    if (i == 1) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,90,50);
+        text(mayo, 90, 50);
     }
-    if(i == 2){
+    if (i == 2) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,150,50);
+        text(mayo, 150, 50);
     }
-    if(i == 3){
+    if (i == 3) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,210,50);
+        text(mayo, 210, 50);
     }
-    if(i == 4){
+    if (i == 4) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,270,50);
+        text(mayo, 270, 50);
     }
-    if(i == 5){
+    if (i == 5) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,330,50);
+        text(mayo, 330, 50);
     }
-    if(i == 6){
+    if (i == 6) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,390,50);
+        text(mayo, 390, 50);
     }
-    if(i == 7){
+    if (i == 7) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,450,50);
+        text(mayo, 450, 50);
     }
-    if(i == 8){
+    if (i == 8) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,510,50);
+        text(mayo, 510, 50);
     }
-    if(i == 9){
+    if (i == 9) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,570,50);
+        text(mayo, 570, 50);
     }
-    if(i == 10){
+    if (i == 10) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,630,50);
+        text(mayo, 630, 50);
     }
-    if(i == 11){
+    if (i == 11) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,690,50);
+        text(mayo, 690, 50);
     }
-    if(i == 12){
+    if (i == 12) {
         console.log(mayo);
         textSize(40);
         fill('black');
-        text(mayo,750,50);
+        text(mayo, 750, 50);
     }
     /*
     Cada uno de estos if sirve para que al
@@ -184,7 +189,7 @@ letra = (i) => {
     */
 }
 
-function draw(){
+function draw() {
     /*
     Esto sirve para hacer la horca
     */
@@ -194,7 +199,7 @@ function draw(){
     line(140, 180, 420, 180);
     line(400, 220, 400, 180);
 
-    cajita.input(() => { 
+    cajita.input(() => {
         /* 
         Esto permitira que solo se 
         pueda poner una letra a la vez
@@ -207,11 +212,11 @@ function draw(){
     drawSprites();
 }
 
-function man(){
-    if(contador === 0){
+function man() {
+    if (contador === 0) {
         console.log("equivocao");
         vidas--;
-        if ( vidas === 5) {
+        if (vidas === 5) {
             circle(400, 270, 100);
         }
 
@@ -235,5 +240,5 @@ function man(){
             line(500, 550, 400, 465);
             alert("perdiste, refresca la pagina para volver a jugar")
         }
-}
+    }
 }
